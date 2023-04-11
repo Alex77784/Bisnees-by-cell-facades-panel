@@ -1,0 +1,75 @@
+.intro {
+    &__content {
+        flex: 0 1 784px;
+    }
+
+    &__title {
+        font-family: $monserat;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 8rem;
+        color: white;
+        margin-bottom: 45px;
+
+        @include media-width1200 {
+            font-size: 4.8rem;
+            line-height: 5.3rem;
+        }
+    }
+
+    &__box-text {
+        margin-bottom: 49px;
+    }
+
+    &__box-text p {
+        font-family: $monserat;
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+        color: white;
+        max-width: 623px;
+        margin-bottom: 16px;
+    }
+
+    &__box-text p:last-child {
+        margin-bottom: 0;
+    }
+
+    &__box-button {
+        display: flex;
+        column-gap: 40px;
+        row-gap: 20px;
+
+        @include media-width1200 {
+            flex-direction: column
+        }
+    }
+
+    &__button-white {
+        @extend %in-btn;
+        background-color: white;
+        color: #272726;
+        padding: 20px 30px;
+        outline: 2px solid transparent;
+        transition: $transition;
+
+        &:hover {
+            background-color: #272726;
+            outline: 2px solid #FFFFFF;
+            color: white;
+        }
+    }
+
+    &__button {
+        @extend %in-btn;
+        background-color: transparent;
+        border: 2px solid #FFFFFF;
+        color: white;
+        padding: 20px 18px;
+        transition: $transition;
+
+        &:hover {
+            background-color: white;
+            color: #272726;
+        }
+    }
+}

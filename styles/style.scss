@@ -1,0 +1,28 @@
+@import './base/_placeholders';
+@import './base/_mixins';
+@import './base/_vars';
+
+
+@import './blocks/header/_header';
+
+@import './blocks/introduction/_intro';
+@import './blocks/introduction/_content';
+
+@import './blocks/footer/_footer';
+
+
+@import './popup/_dark-bd';
+
+body {
+    font-family: $monserat;
+    font-weight: 400;
+    color: black;
+
+    &.active {
+        overflow: hidden;
+    }
+}
+
+.wrapper-page {
+    overflow: hidden;
+}
