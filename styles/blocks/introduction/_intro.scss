@@ -3,12 +3,24 @@
 
     &__container {
         @include container;
+
+        @include media-width992 {
+            @include container(720px);
+        }
     }
 
     &__inner {
         display: flex;
         padding: 70px 0;
         justify-content: space-between;
+
+        @include media-width992 {
+            flex-direction: column;
+        }
+
+        @include media-width570 {
+            padding: 40px 0;
+        }
     }
 
     &__box-youtube {
@@ -22,6 +34,15 @@
         @include media-width1200 {
             flex: 0 1 574px;
             height: 430px;
+        }
+
+        @include media-width992 {
+            margin-left: 0;
+            margin-bottom: 70px;
+        }
+
+        @include media-width570 {
+            height: 300px;
         }
     }
 

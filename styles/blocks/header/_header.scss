@@ -39,6 +39,11 @@
             transition: $transition;
             overflow: auto;
         }
+
+        @include media-width767 {
+            width: 80%;
+            right: -80%;
+        }
     }
 
     &__btn {
@@ -68,6 +73,7 @@
     }
 }
 
+//-----
 .header__inner.active .burger__line {
     &:first-child {
         width: 100%;
@@ -90,6 +96,8 @@
 .header__inner.active .header__box-nav-btn {
     right: 0;
 }
+
+//-----
 
 .nav {
     display: flex;
@@ -126,13 +134,12 @@
 
 .burger {
     position: relative;
-
     display: none;
-    width: 30px;
-    height: 30px;
 
     @include media-width992 {
         display: block;
+        width: 30px;
+        height: 30px;
     }
 
     &__line {
