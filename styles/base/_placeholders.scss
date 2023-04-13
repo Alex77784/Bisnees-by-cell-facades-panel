@@ -4,3 +4,8 @@
     font-weight: 700;
     border-radius: 15px;
 }
+
+%block {
+    display: flex;
+    overflow: hidden;
+}

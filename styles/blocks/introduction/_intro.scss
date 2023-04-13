@@ -11,15 +11,19 @@
 
     &__inner {
         display: flex;
-        padding: 70px 0;
+        padding: 70px 0 100px;
         justify-content: space-between;
 
         @include media-width992 {
             flex-direction: column;
         }
 
+        @include media-width767 {
+            padding: 70px 0 80px;
+        }
+
         @include media-width570 {
-            padding: 40px 0;
+            padding: 40px 0 80px;
         }
     }
 
