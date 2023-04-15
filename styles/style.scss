@@ -2,6 +2,7 @@
 @import './base/_mixins';
 @import './base/_vars';
 
+// ---------------------------
 
 @import './blocks/header/_header';
 
@@ -11,8 +12,11 @@
 @import './blocks/offer/_offer';
 @import './blocks/offer/_inner-block';
 
+@import './blocks/benefit/_benefit';
+
 @import './blocks/footer/_footer';
 
+// ----------------------------
 
 @import './popup/_dark-bd';
 
