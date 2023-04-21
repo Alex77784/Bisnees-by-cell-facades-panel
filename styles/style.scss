@@ -14,11 +14,16 @@
 
 @import './blocks/benefit/_benefit';
 
+@import './blocks/secret/_secret';
+@import './blocks/secret/_text';
+
 @import './blocks/footer/_footer';
 
 // ----------------------------
 
-@import './popup/_dark-bd';
+@import './interactivity/_dark-bd';
+@import './interactivity/_active-btn';
+
 
 body {
     font-family: $monserat;

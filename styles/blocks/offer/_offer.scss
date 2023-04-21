@@ -16,60 +16,34 @@
         overflow: hidden;
     }
 
-
     &__block1 {
-        @extend %block;
         padding: 48px 24px 0 55px;
         border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-
-        @include media-width992 {
-            flex-direction: column;
-            padding: 40px 55px 20px;
-        }
-
-        @include media-width767 {
-            padding: 20px 15px;
-        }
-
-        @include media-width570 {
-            padding: 30px 15px;
-        }
     }
 
     &__block2 {
-        @extend %block;
         padding: 0 24px 0 55px;
         border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-
-        @include media-width992 {
-            flex-direction: column;
-            padding: 40px 55px 20px;
-        }
-
-        @include media-width767 {
-            padding: 20px 15px;
-        }
-
-        @include media-width570 {
-            padding: 30px 15px;
-        }
     }
 
     &__block3 {
-        @extend %block;
         padding: 0 24px 42px 55px;
+    }
+}
 
-        @include media-width992 {
-            flex-direction: column;
-            padding: 40px 55px 20px;
-        }
+.block {
+    @extend %block;
 
-        @include media-width767 {
-            padding: 20px 15px;
-        }
+    @include media-width992 {
+        flex-direction: column;
+        padding: 40px 55px 20px;
+    }
 
-        @include media-width570 {
-            padding: 30px 15px;
-        }
+    @include media-width767 {
+        padding: 20px 15px;
+    }
+
+    @include media-width570 {
+        padding: 30px 15px;
     }
 }
