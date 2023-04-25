@@ -17,6 +17,9 @@
 @import './blocks/secret/_secret';
 @import './blocks/secret/_text';
 
+@import './blocks/innovation/_box-item';
+@import './blocks/innovation/_innovation';
+
 @import './blocks/footer/_footer';
 
 // ----------------------------
@@ -37,4 +40,8 @@ body {
 
 .wrapper-page {
     overflow: hidden;
+}
+
+.container {
+    @include container;
 }

@@ -1,7 +1,6 @@
 let bodyLock = document.body;
 darkBd;// in nav-menu.js
 
-
 function onOffBodyDarkBd() {
     bodyLock.classList.toggle('active');
     darkBd.classList.toggle('active');

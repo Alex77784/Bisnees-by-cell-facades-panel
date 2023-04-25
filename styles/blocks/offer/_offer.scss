@@ -2,10 +2,6 @@
     background-color: $bd;
     margin-top: -1px;
 
-    &__container {
-        @include container;
-    }
-
     &__box-cotent {
         border-radius: 50px;
         border-top: 2px solid rgba(255, 255, 255, 0.1);

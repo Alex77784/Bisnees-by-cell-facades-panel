@@ -1,10 +1,6 @@
 .benefit {
     background-color: #fff;
 
-    &__container {
-        @include container;
-    }
-
     &__inner {
         display: flex;
         justify-content: space-around;
