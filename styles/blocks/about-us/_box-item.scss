@@ -1,0 +1,54 @@
+.about-us {
+    &__box-item {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        flex: 0 1 50%;
+        margin-bottom: 25px;
+
+        @include media-width992 {
+            margin-bottom: 45px;
+        }
+
+        @include media-width767 {
+            flex: 0 1 100%;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__heading {
+        position: relative;
+        @include adeptive-font(16, 24);
+        font-weight: 600;
+        color: white;
+
+        margin-bottom: 18px;
+        padding-left: 48px;
+
+        &::before {
+            content: url('../images/about-us/about-us.svg');
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        @include media-width767 {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__text {
+        @include adeptive-font(14, 18);
+        font-family: $manrope;
+        font-weight: 600;
+        color: $light-gray;
+        line-height: 2;
+        padding-left: 48px;
+
+        @include media-width992 {
+            line-height: 1.5;
+        }
+    }
+}

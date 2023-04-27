@@ -5,6 +5,18 @@
     padding: 0 15px;
 }
 
+@mixin adeptive-font($mblSize, $mktSize, $cntrSize: 1440) {
+    $difference: $mktSize - $mblSize;
+    $addMobSize: $difference * 2 * 0.7;
+
+    font-size: calc(#{$mblSize + px} + #{$difference} * (100vw / #{$cntrSize}));
+
+    @media (max-width:767px) {
+        font-size: calc(#{$mblSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$cntrSize}));
+    }
+
+}
+
 @mixin media-width1200 {
     @media (max-width: 1200px) {
         @content;

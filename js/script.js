@@ -1,4 +1,5 @@
 let bodyLock = document.body;
+let innovationImg = document.querySelector('.about-us__img>img');
 darkBd;// in nav-menu.js
 
 function onOffBodyDarkBd() {
@@ -28,4 +29,18 @@ btns.forEach(el => {
         wave.style.cssText = `width:${size}px;height:${size}px;top:${y}px;left:${x}px`
         this.appendChild(wave)
     })
+})
+
+// replacement photo in about-us
+if (width < 992) {
+    innovationImg.src = './images/about-us/about-us-short.jpg';
+}
+
+window.addEventListener('resize', () => {
+    let width = window.screen.width;
+    if (width < 992) {
+        innovationImg.src = './images/about-us/about-us-short.jpg';
+    } else {
+        innovationImg.src = './images/about-us/about-us.jpg';
+    }
 })
