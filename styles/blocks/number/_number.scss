@@ -1,0 +1,115 @@
+.number {
+    &__container {
+        @include container(1200px);
+    }
+
+    background-color: $bd;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+
+        @include media-width1200 {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__box-content {
+        flex: 0 1 570px;
+        position: relative;
+
+        @include media-width1200 {
+            max-width: 992px;
+        }
+
+        @include media-width992 {
+            flex: 0 1 500px;
+        }
+
+        @include media-width767 {
+            flex: 0 1 420px;
+        }
+
+        @include media-width570 {
+            flex: 0 1 550px;
+        }
+    }
+
+    &__title {
+        @extend %title;
+        @include adeptive-font(26, 48);
+        padding-top: 100px;
+        margin-bottom: 35px;
+
+        @include media-width1200 {
+            text-align: center
+        }
+
+        @include media-width767 {
+            padding-top: 50px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__description {
+        @include adeptive-font(16, 24);
+        font-family: $manrope;
+        color: $light-gray;
+        line-height: 1.3;
+        margin-bottom: 35px;
+
+        @include media-width1200 {
+            text-align: center
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        flex: 0 1 45%;
+
+        @include adeptive-font(16, 24);
+        font-family: $manrope;
+        color: white;
+        line-height: 1.3;
+        margin-bottom: 35px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include media-width767 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        @include media-width570 {
+            flex: 0 1 100%;
+        }
+
+        &>span {
+            display: block;
+            text-align: center;
+            padding: 10px 0;
+
+            border: 2px solid $violet-dark;
+            border-radius: 50%;
+
+            min-width: 48px;
+            height: 48px;
+            margin-right: 32px;
+
+            &::before {
+                content: url('../images/arrow-rigth.svg');
+            }
+        }
+    }
+}

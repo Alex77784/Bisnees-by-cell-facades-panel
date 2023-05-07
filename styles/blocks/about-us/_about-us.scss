@@ -26,6 +26,10 @@
             width: 80%;
             order: 2;
         }
+
+        @include media-width570 {
+            width: 90%;
+        }
     }
 
     &__img>img {
@@ -48,6 +52,10 @@
 
         @include media-width767 {
             padding-top: 50px;
+        }
+
+        @include media-width570 {
+            width: 90%;
         }
     }
 

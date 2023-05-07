@@ -11,7 +11,6 @@ function OffBodyDarkBd() {
     darkBd.classList.remove('active');
 }
 
-
 // btn-animation
 let btns = document.querySelectorAll('.click')
 btns.forEach(el => {
@@ -32,15 +31,14 @@ btns.forEach(el => {
 })
 
 // replacement photo in about-us
-if (width < 992) {
-    innovationImg.src = './images/about-us/about-us-short.jpg';
-}
+if (width <= 992) innovationImg.src = './images/about-us/about-us-short.jpg';
 
 window.addEventListener('resize', () => {
     let width = window.screen.width;
-    if (width < 992) {
+    if (width <= 992) {
         innovationImg.src = './images/about-us/about-us-short.jpg';
     } else {
         innovationImg.src = './images/about-us/about-us.jpg';
     }
 })
+
