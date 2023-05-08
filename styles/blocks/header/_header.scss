@@ -39,6 +39,11 @@
             width: 80%;
             right: -80%;
         }
+
+        @include media-width570 {
+            width: 100%;
+            right: -100%;
+        }
     }
 
     &__btn {

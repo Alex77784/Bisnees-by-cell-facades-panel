@@ -16,7 +16,7 @@
 
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 30px;
             justify-content: center;
         }
     }
@@ -27,7 +27,7 @@
         border-radius: 50%;
         clip: rect(auto, auto, 30px, auto);
 
-        animation: rotate-part-circle 7000s linear infinite alternate forwards;
+        animation: rotate-part-circle 5000s linear infinite alternate forwards;
 
         @keyframes rotate-part-circle {
             0% {
@@ -40,8 +40,8 @@
         }
 
         @include media-width992 {
-            width: 203px !important;
-            height: 203px !important;
+            width: 223px !important;
+            height: 223px !important;
         }
     }
 
@@ -73,8 +73,8 @@
             position: static;
 
             transform: translate(0, 0) !important;
-            width: 200px !important;
-            height: 200px !important;
+            width: 220px !important;
+            height: 220px !important;
         }
     }
 }

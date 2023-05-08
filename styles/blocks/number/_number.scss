@@ -1,18 +1,24 @@
 .number {
+    background-color: $bd;
+    margin-top: -1px;
+
     &__container {
         @include container(1200px);
     }
 
-    background-color: $bd;
-
     &__inner {
         display: flex;
         justify-content: space-between;
+        padding-bottom: 100px;
 
         @include media-width1200 {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+
+        @include media-width767 {
+            padding-bottom: 50px;
         }
     }
 
