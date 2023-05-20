@@ -21,7 +21,8 @@
         }
     }
 
-    &__form-mail {
+    &__col-mail {
+        position: relative;
         display: flex;
         flex-direction: column;
         width: 50%;
@@ -51,6 +52,11 @@
         }
     }
 
+    &__form-mail {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__textarea {
         resize: none;
     }
@@ -60,7 +66,13 @@
         @include adeptive-font(14, 16);
         font-family: $manrope;
         background-color: $violet;
+        color: rgb(58, 58, 58);
         width: 134px;
+        transition: $transition;
+
+        &:hover {
+            background-color: white;
+        }
     }
 
     &__box-img {

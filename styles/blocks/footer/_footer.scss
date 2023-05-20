@@ -1,0 +1,37 @@
+.footer {
+    background-color: black;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 40px;
+
+        @include media-width570 {
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align: center;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    }
+
+    &__info-securiry {
+        @include adeptive-font(16, 18);
+        font-family: $manrope;
+        color: $light-gray;
+
+        @include media-width570 {
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__box-social {
+        display: flex;
+    }
+
+    &__social-item:not(:last-child) {
+        margin-right: 20px;
+    }
+}

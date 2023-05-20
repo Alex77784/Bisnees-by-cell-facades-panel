@@ -23,10 +23,10 @@
                     </a>
                     <div class="header__box-nav-btn">
                         <nav class="header__nav nav">
-                            <a href="#" class="nav__link">В чём секрет</a>
-                            <a href="#" class="nav__link">Инновация</a>
-                            <a href="#" class="nav__link">О нас</a>
-                            <a href="#" class="nav__link">Контакты</a>
+                            <a href="#secret" class="nav__link">В чём секрет</a>
+                            <a href="#innovation" class="nav__link">Инновация</a>
+                            <a href="#about-us" class="nav__link">О нас</a>
+                            <a href="#contacts" class="nav__link">Контакты</a>
                         </nav>
                         <button class="header__btn click">
                             Оставить заявку
@@ -142,7 +142,7 @@
             </section>
             <section class="secret">
                 <div class="container">
-                    <div class="secret__inner">
+                    <div class="secret__inner" id="secret">
                         <div class="secret__text-left">
                             COS
                         </div>
@@ -171,7 +171,7 @@
             </section>
             <section class="innovation">
                 <div class="innovation__container">
-                    <div class="innovation__inner">
+                    <div class="innovation__inner" id="innovation">
                         <div class="innovation__box-content">
                             <h2 class="innovation__title">
                                 В чем <span>инновация?</span>
@@ -206,7 +206,7 @@
                                     </p>
                                 </article>
                             </div>
-                            <button class="innovation__button">Стать партнером</button>
+                            <button class="innovation__button click">Стать партнером</button>
                         </div>
                         <div class="innovation__img">
                             <img src="./images/innovation/innovation.png" alt="picture">
@@ -216,7 +216,7 @@
             </section>
             <section class="about-us">
                 <div class="container">
-                    <div class="about-us__inner">
+                    <div class="about-us__inner" id="about-us">
                         <div class="about-us__img">
                             <img src="./images/about-us/about-us.jpg" alt="picture">
                         </div>
@@ -320,15 +320,18 @@
             </section>
             <section class="leave-mail">
                 <div class="leave-mail__container">
-                    <div class="leave-mail__inner">
-                        <div class="leave-mail__form-mail">
+                    <div class="leave-mail__inner" id="contacts">
+                        <div class="leave-mail__col-mail">
+                            <div class="close-button">X</div>
                             <h2 class="leave-mail__title">
                                 Оставьте заявку
                             </h2>
-                            <input type="text" class="leave-mail__name inputs" placeholder="Имя">
-                            <input type="text" class="leave-mail__email-address inputs" placeholder="Email">
-                            <textarea class="leave-mail__textarea inputs" placeholder="Сообщение"></textarea>
-                            <input type="button" value="Отправить" class="leave-mail__button">
+                            <form action="#" class="leave-mail__form-mail">
+                                <input type="text" class="leave-mail__name inputs" placeholder="Имя">
+                                <input type="text" class="leave-mail__email-address inputs" placeholder="Email">
+                                <textarea class="leave-mail__textarea inputs" placeholder="Сообщение"></textarea>
+                                <button class="leave-mail__button">Отправить</button>
+                            </form>
                         </div>
                         <div class="leave-mail__box-img">
                             <img src="./images/leave-mail.jpg" alt="image">
@@ -369,13 +372,36 @@
         </main>
         <footer class="footer">
             <div class="container">
-                <div class="footer-inner">
-
+                <div class="footer__inner">
+                    <div class="footer__info-securiry">
+                        Все права защищены © Costune 2023
+                    </div>
+                    <ul class="footer__box-social">
+                        <li class="footer__social-item">
+                            <a href="https://www.youtube.com/channel/UCWRSdbo2bbISi9RStsYTgPQ" target="_blank">
+                                <img src="./images/social/youtube.svg" alt="social">
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="https://vk.com/costune" target="_blank">
+                                <img src="./images/social/vk.svg" alt="social">
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="mailto:mail@costune.ru"">
+                                <img src=" ./images/social/email.svg" alt="social">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </footer>
+        <div class="btn-up click">
+            <img src="./images/arrow-up.svg" alt="arrow-up">
+        </div>
     </div>
     <div class="dark-bd"></div>
+    <div class="dark-bd-super"></div>
 
     <script src="./js/nav-menu.js"></script>
     <script src="./js/number.js"></script>

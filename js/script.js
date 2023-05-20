@@ -1,14 +1,14 @@
 let bodyLock = document.body;
+let btnUp = document.querySelector('.btn-up');
 let innovationImg = document.querySelector('.about-us__img>img');
 darkBd;// in nav-menu.js
+darkBdSuper;// in nav-menu.js
+formApp;// in nav-menu.js
+//function onOffSuperBd; in nav-menu.js
 
 function onOffBodyDarkBd() {
     bodyLock.classList.toggle('active');
     darkBd.classList.toggle('active');
-}
-function OffBodyDarkBd() {
-    bodyLock.classList.remove('active');
-    darkBd.classList.remove('active');
 }
 
 // btn-animation
@@ -41,4 +41,34 @@ window.addEventListener('resize', () => {
         innovationImg.src = './images/about-us/about-us.jpg';
     }
 })
+// work with btnUp
+let blockSecret = document.querySelector('#secret');
+let mediaWidth992 = window.matchMedia('(min-width: 992px)');
 
+mediaWidth992.addEventListener('change', minWidth992);
+minWidth992();
+
+function minWidth992() {
+    if (mediaWidth992.matches) {
+        window.addEventListener('scroll', addClass)
+    } else {
+        window.removeEventListener('scroll', addClass)
+    }
+}
+function addClass() {
+    let centerBlockSecret = blockSecret.offsetTop + blockSecret.offsetHeight / 2;
+    let centerVieport = window.scrollY + window.innerHeight / 2 + 50;
+
+    if (centerBlockSecret < centerVieport) {
+        btnUp.classList.add('visible');
+    } else {
+        btnUp.classList.remove('visible');
+    }
+}
+
+btnUp.addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
+})
