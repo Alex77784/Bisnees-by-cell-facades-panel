@@ -326,11 +326,13 @@
                             <h2 class="leave-mail__title">
                                 Оставьте заявку
                             </h2>
-                            <form action="#" class="leave-mail__form-mail">
-                                <input type="text" class="leave-mail__name inputs" placeholder="Имя">
-                                <input type="text" class="leave-mail__email-address inputs" placeholder="Email">
-                                <textarea class="leave-mail__textarea inputs" placeholder="Сообщение"></textarea>
-                                <button class="leave-mail__button">Отправить</button>
+                            <form name="formMail" class="leave-mail__form-mail">
+                                <input name="nameInput" type="text" class="leave-mail__name inputs" placeholder="Имя">
+                                <input name="mailInput" type="email" class="leave-mail__email-address inputs"
+                                    placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                                <textarea name="textarea" class="leave-mail__textarea inputs"
+                                    placeholder="Сообщение"></textarea>
+                                <button class="leave-mail__button" type="submit">Отправить</button>
                             </form>
                         </div>
                         <div class="leave-mail__box-img">
@@ -403,7 +405,9 @@
     <div class="dark-bd"></div>
     <div class="dark-bd-super"></div>
 
+    <script src="./js/variables.js"></script>
     <script src="./js/nav-menu.js"></script>
+    <script src="./js/sendFormTeleg.js"></script>
     <script src="./js/number.js"></script>
     <script src="./js/intro.js"></script>
     <script src="./js/innovation.js"></script>

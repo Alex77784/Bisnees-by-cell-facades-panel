@@ -1,9 +1,3 @@
-let bodyLock = document.body;
-let btnUp = document.querySelector('.btn-up');
-let innovationImg = document.querySelector('.about-us__img>img');
-darkBd;// in nav-menu.js
-darkBdSuper;// in nav-menu.js
-formApp;// in nav-menu.js
 //function onOffSuperBd; in nav-menu.js
 
 function onOffBodyDarkBd() {
@@ -12,7 +6,6 @@ function onOffBodyDarkBd() {
 }
 
 // btn-animation
-let btns = document.querySelectorAll('.click')
 btns.forEach(el => {
     el.addEventListener('click', function (e) {
         let
@@ -41,10 +34,8 @@ window.addEventListener('resize', () => {
         innovationImg.src = './images/about-us/about-us.jpg';
     }
 })
-// work with btnUp
-let blockSecret = document.querySelector('#secret');
-let mediaWidth992 = window.matchMedia('(min-width: 992px)');
 
+// work with btnUp
 mediaWidth992.addEventListener('change', minWidth992);
 minWidth992();
 
@@ -72,3 +63,4 @@ btnUp.addEventListener('click', function () {
         behavior: 'smooth'
     })
 })
+

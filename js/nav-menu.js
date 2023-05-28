@@ -1,13 +1,3 @@
-let headerInner = document.querySelector('.header__inner');
-let burger = document.querySelector('.burger');
-let navLinks = document.querySelectorAll('.nav__link');
-let headerButton = document.querySelector('.header__btn');
-let darkBd = document.querySelector('.dark-bd');
-let darkBdSuper = document.querySelector('.dark-bd-super');
-let formApp = document.querySelector('.leave-mail__col-mail');
-let closeButton = document.querySelector('.close-button');
-
-
 burger.addEventListener('click', burgerOnOff);
 function burgerOnOff() {
     headerInner.classList.toggle('active');
