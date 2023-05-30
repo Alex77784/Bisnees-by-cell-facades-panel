@@ -36,11 +36,11 @@ window.addEventListener('resize', () => {
 })
 
 // work with btnUp
-mediaWidth992.addEventListener('change', minWidth992);
-minWidth992();
+mediaWidth767.addEventListener('change', minWidth767);
 
-function minWidth992() {
-    if (mediaWidth992.matches) {
+minWidth767();
+function minWidth767() {
+    if (mediaWidth767.matches) {
         window.addEventListener('scroll', addClass)
     } else {
         window.removeEventListener('scroll', addClass)
@@ -63,4 +63,3 @@ btnUp.addEventListener('click', function () {
         behavior: 'smooth'
     })
 })
-

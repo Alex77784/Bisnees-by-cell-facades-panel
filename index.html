@@ -59,7 +59,7 @@
                                 <button class="intro__button-white click">
                                     Скачать бизнес-план
                                 </button>
-                                <button class="intro__button click">
+                                <button class="intro__button click back-call">
                                     Заказать обратный звонок
                                 </button>
                             </div>
@@ -171,9 +171,9 @@
             </section>
             <section class="innovation">
                 <div class="innovation__container">
-                    <div class="innovation__inner" id="innovation">
+                    <div class="innovation__inner">
                         <div class="innovation__box-content">
-                            <h2 class="innovation__title">
+                            <h2 class="innovation__title" id="innovation">
                                 В чем <span>инновация?</span>
                             </h2>
                             <div class="innovation__box-item">
@@ -402,12 +402,23 @@
             <img src="./images/arrow-up.svg" alt="arrow-up">
         </div>
     </div>
+    <div class="bd-form">
+        <form name="getNumber" class="get-number">
+            <h2 class="headline-form">Телефон<br>
+                для связи</h2>
+            <button class="btn-close">X</button>
+            <input type="text" name="userName" class="get-data" placeholder="Имя">
+            <input type="tel" name="userPhone" class="get-data" placeholder="+123456789 Формат набора номера">
+            <button type="submit" class="send-form">Отправить</button>
+        </form>
+    </div>
     <div class="dark-bd"></div>
     <div class="dark-bd-super"></div>
 
     <script src="./js/variables.js"></script>
     <script src="./js/nav-menu.js"></script>
     <script src="./js/sendFormTeleg.js"></script>
+    <script src="./js/backCall.js"></script>
     <script src="./js/number.js"></script>
     <script src="./js/intro.js"></script>
     <script src="./js/innovation.js"></script>

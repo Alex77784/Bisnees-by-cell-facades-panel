@@ -11,7 +11,11 @@ function burgerOff() {
 }
 
 navLinks.forEach(link => {
-    link.addEventListener('click', burgerOff);
+    link.addEventListener('click', function () {
+        headerInner.classList.remove('active');
+        bodyLock.classList.remove('active');
+        darkBd.classList.remove('active');
+    });
 })
 
 // click btn in header

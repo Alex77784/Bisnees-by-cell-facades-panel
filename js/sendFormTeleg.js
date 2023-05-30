@@ -1,17 +1,10 @@
 //let = there is form already;
 
-let token = "6126020399:AAFXu7EJ5rBMRX_fOPcsT-mxKQa6jvujEaE";
-let chatId = "-935722415";
-let siteName = "Бизнес на продаже фасадных панелей";
-let txt = '';
+
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-    validation();
-    // look panel tools URL          ==================================================
-    if (!(form.nameInput.value == '' &&
-        form.mailInput.value == '' &&
-        form.textarea.value == '')) {
+    if (validation()) {
         let dataToTeleg = {
             'Заказ с сайта:': siteName,
             'Имя:': form.nameInput.value,
@@ -27,6 +20,14 @@ form.addEventListener('submit', function (event) {
         if (darkBdSuper.classList.contains('active')) {
             onOffSuperBd();
         }
+
+        onOffSuperBd();
+        darkBdSuper.insertAdjacentHTML('afterBegin', '<div id = "message-del">Cообщение отправлено!</div>');
+
+        setTimeout(function () {
+            document.querySelector('#message-del').remove();
+            onOffSuperBd();
+        }, 3000)
     };
 
     [...form.children].forEach(elem => {
@@ -35,21 +36,24 @@ form.addEventListener('submit', function (event) {
 })
 
 function validation() {
+    let flag = true;
     if (form.nameInput.value == '') {
         form.nameInput.insertAdjacentHTML('beforeBegin', '<p class = "warning">Введите имя</p>');
-    } else {
-        if (document.querySelector('.warning')) {
-            document.querySelectorAll('.warning').forEach(el => el.remove());
-        }
+        flag = false;
+    } else if (document.querySelector('.warning')) {
+        document.querySelectorAll('.warning').forEach(el => el.remove());
     }
     if (form.mailInput.value == '') {
         form.mailInput.insertAdjacentHTML('beforeBegin', '<p class = "warning">Введите Email</p>');
+        flag = false;
     } else if (document.querySelector('.warning') && !(form.nameInput.value == '')) {
         document.querySelectorAll('.warning').forEach(el => el.remove());
     }
     if (form.textarea.value == '') {
         form.textarea.insertAdjacentHTML('beforeBegin', '<p class = "warning">Введите текст сообщение в проивольной форме</p>');
+        flag = false;
     } else if (document.querySelector('.warning' && !(form.nameInput.value == ''))) {
         document.querySelectorAll('.warning').forEach(el => el.remove());
     }
+    return flag;
 }
