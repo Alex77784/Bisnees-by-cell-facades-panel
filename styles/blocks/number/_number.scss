@@ -48,6 +48,12 @@
         @include adeptive-font(26, 48);
         padding-top: 100px;
         margin-bottom: 35px;
+        transform: translateX(500px) scale(0);
+        transition: 1s;
+
+        &.animation {
+            transform: translateY(0px) scale(1);
+        }
 
         @include media-width1200 {
             text-align: center

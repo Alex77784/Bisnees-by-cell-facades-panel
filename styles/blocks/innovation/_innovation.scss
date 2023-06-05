@@ -62,16 +62,30 @@
     &__title span {
         background: linear-gradient(to left, $violet-dark, $violet-dark) no-repeat;
         background-position: 0 100%;
-        background-size: 100% 20px;
+        background-size: 0% 20px;
         padding-bottom: 10px;
+        transition: 1s;
+
+        &.animation {
+            background-size: 100% 20px;
+        }
 
         @include media-width992 {
-            background-size: 100% 15px;
+            background-size: 0% 15px;
+
+            &.animation {
+                background-size: 100% 15px;
+            }
         }
 
         @include media-width570 {
-            background-size: 100% 10px;
+            background-size: 0% 10px;
+
+            &.animation {
+                background-size: 100% 10px;
+            }
         }
+
     }
 
     &__button {

@@ -1,4 +1,4 @@
-btnAskPhone.addEventListener('click', getNumber);
+btnAskPhone.forEach(elem => elem.addEventListener('click', getNumber));
 function getNumber() {
     popupPhone.classList.add('active');
     bodyLock.classList.add('active');
@@ -22,14 +22,18 @@ function sendNumberPhone(event) {
         inputName.value = '';
         inputPhone.value = '';
         popupPhone.classList.remove('active');
-        bodyLock.classList.remove('active');
+
 
         onOffSuperBd();
+        bodyLock.classList.add('active');
         darkBdSuper.insertAdjacentHTML('afterBegin', '<div id = "message-del">Cообщение отправлено!</div>');
 
         setTimeout(function () {
             document.querySelector('#message-del').remove();
             onOffSuperBd();
+            if (!(headerInner.classList.contains('active'))) {
+                bodyLock.classList.remove('active');
+            }
         }, 3000)
     }
 }

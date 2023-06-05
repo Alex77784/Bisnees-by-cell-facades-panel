@@ -47,9 +47,17 @@
         @include adeptive-font(26, 48);
         margin-bottom: 40px;
 
+        transform: rotate(180deg) scale(0) translate(300px, 300px);
+        transition: 1s;
+
+        &.animation {
+            transform: rotate(0deg) scale(1) translate(0px, 0px);
+        }
+
         @include media-width992 {
             text-align: center;
         }
+
     }
 
     &__form-mail {

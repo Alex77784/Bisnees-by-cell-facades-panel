@@ -16,11 +16,29 @@
         padding: 53px 15px 66px;
         text-align: center;
         width: 290px;
+        transition: 1s;
 
         @include media-width767 {
             padding: 30px 15px 20px;
         }
+
+        &.c1 {
+            transform: translateY(-100px) scale(0);
+        }
+
+        &.c2 {
+            transform: translateY(100px) scale(0);
+        }
+
+        &.c3 {
+            transform: translateY(-100px) scale(0);
+        }
+
+        &.animation {
+            transform: translateY(0px) scale(1);
+        }
     }
+
 
     &__img {
         margin-bottom: 29px;

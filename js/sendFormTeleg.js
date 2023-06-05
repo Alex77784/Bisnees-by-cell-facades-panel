@@ -1,7 +1,5 @@
 //let = there is form already;
 
-
-
 form.addEventListener('submit', function (event) {
     event.preventDefault();
     if (validation()) {
@@ -27,6 +25,9 @@ form.addEventListener('submit', function (event) {
         setTimeout(function () {
             document.querySelector('#message-del').remove();
             onOffSuperBd();
+            if (!(headerInner.classList.contains('active'))) {
+                bodyLock.classList.remove('active');
+            }
         }, 3000)
     };
 

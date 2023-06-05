@@ -19,7 +19,7 @@ navLinks.forEach(link => {
 })
 
 // click btn in header
-headerButton.addEventListener('click', leaveApplication);
+callEmail.forEach(el => el.addEventListener('click', leaveApplication));
 function leaveApplication() {
     onOffSuperBd();
     visibleForm();
@@ -42,6 +42,9 @@ function btnClose() {
         bodyLock.classList.add('active');
     }
     closeButton.classList.remove('active');
+    if (!(headerInner.classList.contains('active'))) {
+        bodyLock.classList.remove('active');
+    }
 };
 
 darkBdSuper.addEventListener('click', onOffSuperBd);

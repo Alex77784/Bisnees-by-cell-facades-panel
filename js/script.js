@@ -63,3 +63,38 @@ btnUp.addEventListener('click', function () {
         behavior: 'smooth'
     })
 })
+
+// window scroll
+window.addEventListener('scroll', eventScroll);
+
+function eventScroll() {
+    let scrlPageFromTopToViewport75 = Math.round(window.scrollY + (window.innerHeight / 100 * 75));
+    // offerBlock
+    if (offerTitle.offsetTop <= scrlPageFromTopToViewport75) {
+        offerTitle.classList.add('animation');
+    }
+    // benefitBlock
+    if (cardsBenefit[0].offsetTop <= scrlPageFromTopToViewport75) {
+        cardsBenefit.forEach(el => el.classList.add('animation'));
+    }
+    // secretBlock
+    if (secretTitle.offsetTop <= scrlPageFromTopToViewport75) {
+        secretTitle.classList.add('animation');
+    }
+    // innovationBlock
+    if (innovTitle.offsetTop <= scrlPageFromTopToViewport75) {
+        innovTitle.classList.add('animation');
+    }
+    // about-usBlock
+    if (aboutTitle.offsetTop <= scrlPageFromTopToViewport75) {
+        aboutTitle.classList.add('animation');
+    }
+    // numberBlock
+    if (numberTitle.offsetTop <= scrlPageFromTopToViewport75) {
+        document.querySelector('.number__title').classList.add('animation');
+    }
+    // leaveMailBlock
+    if (leaveMailInner.offsetTop <= scrlPageFromTopToViewport75) {
+        leaveMailTitle.classList.add('animation');
+    }
+}

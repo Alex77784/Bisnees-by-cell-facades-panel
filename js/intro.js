@@ -11,3 +11,9 @@ window.addEventListener('resize', () => {
     }
 })
 
+buttonPlayYoutube.addEventListener('click', playBlackIntro);
+function playBlackIntro() {
+    this.style.display = 'none';
+    youtube.lastElementChild.style.display = 'block';
+    youtube.lastElementChild.src += '?autoplay=1&mute=0';
+}

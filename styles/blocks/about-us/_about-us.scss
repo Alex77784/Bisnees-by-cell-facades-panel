@@ -63,6 +63,12 @@
         @extend %title;
         @include adeptive-font(26, 48);
         margin-bottom: 35px;
+        transition: 1s;
+        transform: skewX(-90deg);
+
+        &.animation {
+            transform: skewX(0deg);
+        }
 
         @include media-width992 {
             text-align: center;
