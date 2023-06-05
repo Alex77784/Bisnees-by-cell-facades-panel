@@ -9,9 +9,9 @@ function sendNumberPhone(event) {
     event.preventDefault();
     if (validateName() && validatePhone()) {
         let dataForm = {
-            'Заказ с сайта:': siteName,
-            'Имя:': inputName.value,
-            'Телефон:': inputPhone.value
+            'Заказ с сайта: siteName,
+            'Имя: inputName.value,
+            'Телефон: inputPhone.value
         }
         for (let key in dataForm) {
             phoneNum += `<b>${key}</b> ${dataForm[key]}%0A`;
