@@ -1,0 +1,59 @@
+@import './base/_placeholders';
+@import './base/_mixins';
+@import './base/_vars';
+
+// ---------------------------
+
+@import './blocks/header/_header';
+
+@import './blocks/introduction/_intro';
+@import './blocks/introduction/_content';
+
+@import './blocks/offer/_offer';
+@import './blocks/offer/_inner-block';
+
+@import './blocks/benefit/_benefit';
+
+@import './blocks/secret/_secret';
+@import './blocks/secret/_text';
+
+@import './blocks/innovation/_box-item';
+@import './blocks/innovation/_innovation';
+
+@import './blocks/about-us/_about-us';
+@import './blocks/about-us/_box-item';
+
+@import './blocks/number/_number';
+@import './blocks/number/_box-cercle';
+
+@import './blocks/leave-mail/_leave-mail';
+@import './blocks/leave-mail/_contacts';
+
+@import './blocks/footer/_footer';
+
+// ----------------------------
+
+@import './interactivity/_dark-bd';
+@import './interactivity/_active-btn';
+@import './interactivity/_btn-up';
+@import './interactivity/_form';
+@import './interactivity/_form-phone';
+
+
+body {
+    font-family: $monserat;
+    font-weight: 400;
+    color: black;
+
+    &.active {
+        overflow: hidden;
+    }
+}
+
+.wrapper-page {
+    overflow: hidden;
+}
+
+.container {
+    @include container;
+}

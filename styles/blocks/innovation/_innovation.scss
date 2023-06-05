@@ -1,0 +1,133 @@
+.innovation {
+    &__container {
+        @include container(1200px);
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 40px;
+        row-gap: 30px;
+        padding: 100px 0 50px;
+
+        @include media-width1200 {
+            padding: 75px 0 50px;
+        }
+
+        @include media-width992 {
+            padding: 50px 0;
+        }
+
+        @include media-width767 {
+            padding: 30px 0;
+        }
+    }
+
+    &__box-content {
+        flex: 0 1 50%;
+
+        @include media-width992 {
+            display: flex;
+            flex-direction: column;
+            flex: 0 1 70%;
+            align-items: center;
+        }
+
+        @include media-width767 {
+            flex: 0 1 100%;
+        }
+    }
+
+    &__title {
+        @extend %title;
+        color: $bd;
+        margin-bottom: 50px;
+
+        @include media-width1200 {
+            font-size: 45px;
+        }
+
+        @include media-width992 {
+            font-size: 34px;
+            text-align: center;
+        }
+
+        @include media-width570 {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__title span {
+        background: linear-gradient(to left, $violet-dark, $violet-dark) no-repeat;
+        background-position: 0 100%;
+        background-size: 0% 20px;
+        padding-bottom: 10px;
+        transition: 1s;
+
+        &.animation {
+            background-size: 100% 20px;
+        }
+
+        @include media-width992 {
+            background-size: 0% 15px;
+
+            &.animation {
+                background-size: 100% 15px;
+            }
+        }
+
+        @include media-width570 {
+            background-size: 0% 10px;
+
+            &.animation {
+                background-size: 100% 10px;
+            }
+        }
+
+    }
+
+    &__button {
+        background-color: $violet-dark;
+        border-radius: 5px;
+
+        font-size: 16px;
+        color: white;
+        letter-spacing: 1px;
+        font-weight: 600;
+
+        width: 180px;
+        height: 50px;
+        margin: 0 0 0 35px;
+        transition: $transition;
+
+        &:hover {
+            background-color: $bd;
+        }
+
+        @include media-width992 {
+            width: 50%;
+            margin: 30px 0 0;
+        }
+
+        @include media-width570 {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        flex: 0 1 50%;
+        border-radius: 33px;
+        overflow: hidden;
+
+        @include media-width992 {
+            max-height: 350px;
+            flex: 0 1 70%;
+        }
+    }
+
+    &__img>img {
+        width: 100%;
+    }
+}

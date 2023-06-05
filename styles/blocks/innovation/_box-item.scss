@@ -1,0 +1,59 @@
+.innovation {
+    &__box-item {
+        margin-bottom: 20px;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
+    &__headind {
+        position: relative;
+        font-size: 24px;
+        font-weight: 600;
+
+        padding-left: 35px;
+        margin-bottom: 12px;
+
+        &::before {
+            content: url('../images/innovation/innov-left-arrow.svg');
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            @include media-width767 {
+                top: -2px;
+            }
+
+            @include media-width570 {
+                top: -5px;
+            }
+        }
+
+        @include media-width767 {
+            font-size: 20px;
+        }
+
+        @include media-width570 {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    &__paragraph {
+        font-size: 18px;
+        line-height: 30px;
+        padding-left: 35px;
+
+        @include media-width767 {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        @include media-width570 {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+}

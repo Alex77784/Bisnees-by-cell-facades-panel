@@ -1,0 +1,31 @@
+.leave-mail__col-mail.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    border: 2px solid $violet-dark;
+    border-radius: 20px;
+    padding: 30px;
+
+    @include media-width570 {
+        border: none;
+    }
+}
+
+.close-button.active {
+    @extend %button-close;
+
+    @media (max-width:570px) {
+        top: auto;
+        left: auto;
+        bottom: 30px;
+        right: 30px;
+    }
+}
+
+.warning {
+    margin-left: 20px;
+    color: red;
+    font-size: 20px;
+}

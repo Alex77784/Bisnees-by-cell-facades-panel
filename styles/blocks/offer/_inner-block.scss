@@ -1,0 +1,119 @@
+.offer {
+    &__inner {
+        padding: 15px 0 85px;
+
+        @include media-width992 {
+            padding: 0 0 85px 0;
+        }
+
+        @include media-width767 {
+            padding: 0 0 45px 0;
+        }
+    }
+
+    &__title {
+        @extend %title;
+        margin-bottom: 65px;
+
+        @include media-width1200 {
+            font-size: 4.5rem;
+            text-align: center;
+        }
+
+        @include media-width992 {
+            font-size: 3.7rem;
+        }
+
+        @include media-width767 {
+            margin-bottom: 45px;
+            font-size: 3rem;
+        }
+
+        @include media-width570 {
+            font-size: 2.6rem;
+        }
+
+        transform: translate(-600px) scale(0.5);
+        transition: 0.5s;
+
+        &.animation {
+            transform: translate(0px) scale(1);
+        }
+    }
+
+
+    &__desc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: white;
+
+        flex: 0 0 403px;
+
+        background-color: $violet-dark;
+        margin-right: 77px;
+
+        box-shadow: 0px 0px 20px 20px $violet-dark;
+
+        @include media-width1200 {
+            flex: 0 0 325px;
+        }
+
+        @include media-width992 {
+            border-radius: 20px;
+            margin: 0 0 50px 0;
+            flex: 0 0 70px;
+        }
+
+        @include media-width767 {
+            font-size: 2rem;
+            letter-spacing: 1px;
+            margin: 0 0 30px 0;
+            flex: 0 0 50px;
+
+            box-shadow: 0px 0px 10px 10px $violet-dark;
+        }
+    }
+
+
+    &__text {
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+        color: white;
+        padding: 25px 0;
+
+        @include media-width1200 {
+            font-size: 2.2rem;
+            line-height: 2.5rem;
+        }
+
+        @include media-width992 {
+            font-size: 2rem;
+            line-height: 2.3rem;
+        }
+
+        @include media-width767 {
+            font-size: 1.6rem;
+            padding: 25px 0 0;
+        }
+
+        @include media-width570 {
+            padding: 35px 0 0;
+        }
+    }
+}
+
+.desc-first {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.desc-last {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    line-height: 25px;
+    text-align: center;
+}
