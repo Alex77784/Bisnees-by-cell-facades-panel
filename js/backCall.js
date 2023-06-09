@@ -17,7 +17,7 @@ function sendNumberPhone(event) {
             phoneNum += `<b>${key}</b> ${dataForm[key]}%0A`;
         }
 
-        fetch(`http://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${phoneNum}`);
+        fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${phoneNum}`);
 
         inputName.value = '';
         inputPhone.value = '';
