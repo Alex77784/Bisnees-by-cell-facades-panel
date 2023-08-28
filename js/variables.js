@@ -37,7 +37,7 @@ let phoneNum = '';
 
 //sensFormTelegram file
 let token = "6126020399:AAFXu7EJ5rBMRX_fOPcsT-mxKQa6jvujEaE";
-let chatId = "-935722415";
+let chatId = "-976033618";
 let siteName = "Бизнес на продаже фасадных панелей";
 let txt = '';
 
